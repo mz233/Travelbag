@@ -1,16 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+  ~ Copyright 2017 GcsSloop
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ Last modified 2017-09-11 15:12:44
+  ~
+  ~ GitHub: https://github.com/GcsSloop
+  ~ WeiBo: http://weibo.com/GcsSloop
+  ~ WebSite: http://www.gcssloop.com
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffff"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:onClick="bgclick"
     tools:context="com.example.mazhuang.travelbag.MainFrame">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+
+    <com.gcssloop.widget.RCRelativeLayout
+        android:layout_width="1000dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        app:round_as_circle="true"
+        app:round_corner="30dp"
+        android:padding="10dp"
+        android:background="@drawable/bg2"
+        app:round_corner_bottom_right="0dp"
+        app:stroke_color="#ADFF2F"
+        app:stroke_width="4dp"
+        android:id="@+id/view">
+
+        <ImageView
+            android:onClick="click"
+            android:background="@drawable/door"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mbg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:background="#995F5652"
+            android:gravity="center_horizontal"
+            android:text="旅行在手"
+            android:textColor="#fff"
+            android:textSize="24sp"/>
+
+
+
+    </com.gcssloop.widget.RCRelativeLayout>
+
+    <Button
+        android:id="@+id/doorBtn"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:background="@drawable/door"
+        android:text="上门取件"
+        android:textColor="#515151"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp" />
+
+    <Button
+        android:id="@+id/selfBtn"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_gravity="right"
+        android:background="@drawable/self"
+        android:text="驿站自存"
+        android:textColor="#515151"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/doorBtn"
+        android:layout_toRightOf="@+id/doorBtn"
+        android:layout_toEndOf="@+id/doorBtn" />
+
+
 </RelativeLayout>
+
