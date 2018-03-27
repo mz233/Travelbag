@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright 2017 GcsSloop
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~    http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  ~
-  ~ Last modified 2017-09-11 15:12:44
-  ~
-  ~ GitHub: https://github.com/GcsSloop
-  ~ WeiBo: http://weibo.com/GcsSloop
-  ~ WebSite: http://www.gcssloop.com
-  -->
+
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -38,32 +18,17 @@
         android:layout_width="1000dp"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
-        app:round_as_circle="true"
-        app:round_corner="30dp"
-        android:padding="10dp"
-        android:background="@drawable/bg2"
-        app:round_corner_bottom_right="0dp"
-        app:stroke_color="#ADFF2F"
-        app:stroke_width="4dp"
         android:id="@+id/view">
 
         <ImageView
             android:onClick="click"
-            android:background="@drawable/door"
+            android:background="@drawable/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/mbg"/>
+            />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_alignParentBottom="true"
-            android:background="#995F5652"
-            android:gravity="center_horizontal"
-            android:text="旅行在手"
-            android:textColor="#fff"
-            android:textSize="24sp"/>
+
 
 
 
@@ -72,29 +37,92 @@
     <Button
         android:id="@+id/doorBtn"
         android:layout_width="180dp"
-        android:layout_height="150dp"
-        android:background="@drawable/door"
+        android:layout_height="80dp"
+        android:background="#A2D5F2"
         android:text="上门取件"
         android:textColor="#515151"
-        android:textSize="24sp"
-        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:layout_below="@+id/view"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginTop="38dp" />
 
     <Button
         android:id="@+id/selfBtn"
         android:layout_width="180dp"
-        android:layout_height="150dp"
+        android:layout_height="80dp"
         android:layout_gravity="right"
-        android:background="@drawable/self"
+        android:background="@color/primary_text_disabled_material_light"
         android:text="驿站自存"
         android:textColor="#515151"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:layout_alignTop="@+id/doorBtn"
         android:layout_toRightOf="@+id/doorBtn"
         android:layout_toEndOf="@+id/doorBtn" />
 
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ffff"
+        android:padding="8dp"
+
+
+        android:textSize="20sp"
+        android:textColor="#515151"
+        android:text="   生活不止眼前的苟且，\n    还有诗和远方的田野。\n                                            --致旅行"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:layout_below="@+id/doorBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_alignBottom="@+id/tab_menu" />
+
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#A2D5F2"
+            android:drawablePadding="10dp"
+            android:drawableBottom="@drawable/home"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/order"
+            android:background="#A2D5F2"
+            android:drawablePadding="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#A2D5F2"
+            android:drawablePadding="10dp"
+            android:drawableBottom="@drawable/account"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>
+
 
