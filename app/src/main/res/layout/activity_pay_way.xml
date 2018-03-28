@@ -12,26 +12,35 @@
 
     <RelativeLayout
         android:layout_width="850px"
-        android:layout_height="600px"
+        android:layout_height="1300px"
         android:orientation="vertical"
-        android:background="@drawable/round1"
+        android:background="@drawable/round"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
-        <Button
-            android:id="@+id/sub_Btn2"
-            android:layout_width="280px"
-            android:layout_height="140px"
-            android:text="创建订单"
-            android:layout_below="@+id/time"
-            android:layout_marginTop="60dp"
-            android:textSize="20sp"
-            android:textColor="#101010"
-            android:background="#FFFFFF"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <RadioButton
+                android:id="@+id/radio_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝"
+                />
+            <RadioButton
+                android:id="@+id/radio_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                />
+
+
+        </RadioGroup>
     </RelativeLayout>
+
 
 </RelativeLayout>

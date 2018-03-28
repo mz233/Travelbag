@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true">
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/name1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="80dp"
@@ -29,10 +29,10 @@
             android:hint=" 姓名"
             android:textSize="20sp" />
         <EditText
-            android:id="@+id/phone"
+            android:id="@+id/phone1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_below="@+id/name"
+            android:layout_below="@+id/name1"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/line"
@@ -41,36 +41,49 @@
             android:hint=" 电话"
             android:textSize="20sp" />
         <EditText
-            android:id="@+id/address"
+            android:id="@+id/address1"
             android:layout_width="match_parent"
-            android:layout_below="@+id/phone"
+            android:layout_below="@+id/phone1"
             android:layout_height="30dp"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/line"
             android:drawablePadding="5dp"
             android:ems="19"
-            android:hint=" 详细地址"
+            android:hint=" 目的地"
             android:textSize="20sp" />
         <EditText
-            android:id="@+id/time"
+            android:id="@+id/bag"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="70dp"
-            android:layout_below="@+id/address"
+            android:layout_below="@+id/address1"
             android:background="@drawable/line"
             android:drawablePadding="5dp"
             android:ems="19"
-            android:hint=" 取货时间"
+            android:hint=" 行李件数"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/time1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="70dp"
+            android:layout_below="@+id/bag"
+            android:background="@drawable/line"
+            android:drawablePadding="5dp"
+            android:ems="19"
+            android:hint=" 时间"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/sub_Btn1"
+            android:id="@+id/sub_Btn3"
             android:layout_width="240px"
             android:layout_height="110px"
-            android:text="呼叫取件"
-            android:layout_below="@+id/time"
+            android:text="提交"
+            android:layout_below="@+id/time1"
             android:layout_marginTop="60dp"
             android:textSize="20sp"
             android:textColor="#101010"
@@ -81,6 +94,9 @@
 
 
 
+
+
     </RelativeLayout>
 
 </RelativeLayout>
+

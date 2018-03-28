@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".FetchActivity" />
-        <activity android:name=".Wait_Fetch_Activity"></activity>
+        <activity android:name=".Wait_Fetch_Activity" />
+        <activity android:name=".CreateOrder" />
+        <activity android:name=".Payment_Activity" />
+        <activity android:name=".PayWay"></activity>
     </application>
 
 </manifest>
