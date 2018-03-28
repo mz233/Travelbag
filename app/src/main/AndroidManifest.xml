@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FetchActivity"></activity>
+        <activity android:name=".FetchActivity" />
+        <activity android:name=".Wait_Fetch_Activity"></activity>
     </application>
 
 </manifest>
