@@ -10,7 +10,6 @@
     android:background="#ffff"
     android:orientation="vertical"
     android:padding="20dp"
-    android:onClick="bgclick"
     tools:context="com.example.mazhuang.travelbag.MainFrame">
 
 
@@ -21,15 +20,11 @@
         android:id="@+id/view">
 
         <ImageView
-            android:onClick="click"
             android:background="@drawable/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             />
-
-
-
 
 
     </com.gcssloop.widget.RCRelativeLayout>
@@ -66,8 +61,6 @@
         android:layout_height="150dp"
         android:background="#ffff"
         android:padding="8dp"
-
-
         android:textSize="20sp"
         android:textColor="#515151"
         android:text="   生活不止眼前的苟且，\n    还有诗和远方的田野。\n                                            --致旅行"

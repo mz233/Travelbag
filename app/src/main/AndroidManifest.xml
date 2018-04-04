@@ -19,7 +19,9 @@
         <activity android:name=".Wait_Fetch_Activity" />
         <activity android:name=".CreateOrder" />
         <activity android:name=".Payment_Activity" />
-        <activity android:name=".PayWay"></activity>
+        <activity android:name=".PayWay" />
+        <activity android:name=".order_main" />
+        <activity android:name=".Self"></activity>
     </application>
 
 </manifest>

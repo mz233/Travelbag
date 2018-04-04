@@ -18,24 +18,43 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
+       <TextView
+           android:layout_width="600px"
+           android:layout_height="150px"
+           android:textAlignment="center"
+           android:text="请选择支付方式："
+           android:maxLines="1"
+           android:textColor="#101010"
+           android:textSize="22sp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="150dp"/>
 
         <RadioGroup
+            android:id="@+id/payway"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
 
             >
+
+
             <RadioButton
-                android:id="@+id/radio_boy"
+                android:id="@+id/radio_zfb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="支付宝"
+                android:textColor="#101010"
+                android:textSize="20sp"
                 />
             <RadioButton
-                android:id="@+id/radio_girl"
+                android:id="@+id/radio_wechat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="微信"
+                android:textColor="#101010"
+                android:textSize="20sp"
                 />
 
 
