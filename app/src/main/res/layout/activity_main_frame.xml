@@ -40,7 +40,8 @@
         android:layout_below="@+id/view"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="38dp" />
+        android:layout_marginTop="38dp"
+        />
 
     <Button
         android:id="@+id/selfBtn"
@@ -69,51 +70,9 @@
         android:layout_below="@+id/doorBtn"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_alignBottom="@+id/tab_menu" />
-
-    <LinearLayout
-        android:id="@+id/tab_menu"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#A2D5F2"
-            android:drawablePadding="10dp"
-            android:drawableBottom="@drawable/home"
-            android:gravity="center"
-            />
-
-        <TextView
-            android:id="@+id/order"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableBottom="@drawable/order"
-            android:background="#A2D5F2"
-            android:drawablePadding="10dp"
-            android:gravity="center" />
-
-        <TextView
-            android:id="@+id/txt_user"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#A2D5F2"
-            android:drawablePadding="10dp"
-            android:drawableBottom="@drawable/account"
-            android:gravity="center" />
+        android:layout_marginTop="40dp" />
 
 
-
-    </LinearLayout>
 
 
 </RelativeLayout>
