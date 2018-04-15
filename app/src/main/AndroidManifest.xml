@@ -8,9 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainFrame">
-
-        </activity>
+        <activity android:name=".MainFrame" />
         <activity android:name=".FetchActivity" />
         <activity android:name=".Wait_Fetch_Activity" />
         <activity android:name=".CreateOrder" />
@@ -25,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login" />
+        <activity android:name=".register"></activity>
     </application>
 
 </manifest>

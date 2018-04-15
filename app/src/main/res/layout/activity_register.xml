@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/fetchbg"
+    tools:context="com.example.mazhuang.travelbag.register">
+
+    <RelativeLayout
+        android:layout_width="850px"
+        android:layout_height="1300px"
+        android:orientation="vertical"
+        android:background="@drawable/round"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            android:src="@drawable/loginuser" />
+
+        <EditText
+            android:id="@+id/login_edit_tel"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/image_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:hint="请输入您的电话"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/login_edit_pwd"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/login_edit_tel"
+            android:layout_alignStart="@+id/login_edit_tel"
+            android:layout_below="@+id/login_edit_tel"
+            android:ems="10"
+            android:hint="请输入您的密码"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/login_edit_repwd"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/login_edit_pwd"
+            android:layout_alignStart="@+id/login_edit_pwd"
+            android:layout_below="@+id/login_edit_pwd"
+            android:ems="10"
+            android:hint="再次输入您的密码"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/login_btn_register"
+            android:layout_width="350px"
+            android:layout_height="110px"
+            android:text="注册"
+            android:layout_below="@+id/login_edit_pwd"
+            android:layout_marginTop="100dp"
+            android:textSize="20sp"
+            android:textColor="#FAFAFA"
+            android:background="#1160AA"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

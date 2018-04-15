@@ -26,12 +26,13 @@ public class Home extends AppCompatActivity {
     private TextView tvChat, tvFriends, tvContacts, tvCurrent;
     private LocalActivityManager manager;
     private Intent intentMain,intentOrder,intentSelf;
+    private MyDatabaseHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
-
+        dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
         initView();
         initData(savedInstanceState);
     }
