@@ -1,6 +1,7 @@
 package com.example.mazhuang.travelbag;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +30,29 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 String account = editext1.getText().toString();
                 String pwd = editext2.getText().toString();
-                if(account.equals(pwd)){
-
+                String psw_temp = travelDB.selectpsw(account);
+                if(psw_temp.equals(pwd)){
                     Intent intent = new Intent(login.this, Self.class);
                     startActivity(intent);
+                }else{
+                    showExitDialog01();
+                    //提示密码错误
                 }
             }
         });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, register.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private void showExitDialog01(){
+        new AlertDialog.Builder(this)
+                .setTitle("提示")
+                .setMessage("密码错误")
+                .setPositiveButton("确定", null)
+                .show();
     }
 }

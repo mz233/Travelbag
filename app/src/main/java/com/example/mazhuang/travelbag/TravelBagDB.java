@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
 import java.security.Timestamp;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +65,7 @@ public class TravelBagDB {
     /**
      * 从数据库读取所有的用户信息。
      */
-    public List<user> loadProvinces() {
+    public List<user> loadUser() {
         List<user> list = new ArrayList<user>();
         Cursor cursor = db
                 .query("user", null, null, null, null, null, null);
@@ -107,5 +110,37 @@ public class TravelBagDB {
             db.insert("address", null, values);
         }
     }
-
+    /**
+     * 从数据库读取所有的状态为0的订单信息信息。
+     */
+    public List<Order> loadOrder0() {
+        List<Order> list = new ArrayList<Order>();
+        Cursor cursor = db.rawQuery("select * from order1 where status=?", new String[]{"0"});
+        if (cursor.moveToFirst()) {
+            do {
+                Order order3 = new Order();
+                order3.setId(cursor.getInt(cursor.getColumnIndex("id")));//订单编号
+                order3.setBagNum(cursor.getInt(cursor
+                        .getColumnIndex("bagNum")));//行李件数
+                order3.setPhone(cursor.getString(cursor
+                        .getColumnIndex("name")));//名字
+                order3.setPhone(cursor.getString(cursor
+                        .getColumnIndex("phone")));//电话
+                order3.setDestination(cursor.getString(cursor
+                        .getColumnIndex("destination")));//目的地
+                list.add(order3);
+            } while (cursor.moveToNext());
+        }
+        return list;
+    }
+    /**
+     * 根据账号查询密码
+     */
+    public String selectpsw(String account) {
+        Cursor cursor = db.query("user", null, "phone" + "=?",
+                new String[] { account },null,null,null,null);
+        String psw = cursor.getString(cursor
+                        .getColumnIndex("password"));
+        return psw;
+    }
 }

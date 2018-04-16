@@ -14,7 +14,7 @@ public class Self extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_self);
-        button1 = (Button) findViewById(R.id.login_btn_register);
+        button1 = (Button) findViewById(R.id.login_btn_login);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

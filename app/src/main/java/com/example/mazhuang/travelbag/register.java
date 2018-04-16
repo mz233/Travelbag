@@ -1,6 +1,7 @@
 package com.example.mazhuang.travelbag;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,10 +39,20 @@ public class register extends AppCompatActivity {
                     travelDB.saveUser(user1);
                     Intent intent = new Intent(register.this, login.class);
                     startActivity(intent);
+                }else{
+
+                    showExitDialog02();
                 }
 
 
             }
         });
+    }
+    private void showExitDialog02(){
+        new AlertDialog.Builder(this)
+                .setTitle("提示")
+                .setMessage("请检查两次密码输入是否一致")
+                .setPositiveButton("确定", null)
+                .show();
     }
 }
